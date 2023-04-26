@@ -1,0 +1,13 @@
+@font-face {
+	src: url('../fonts/assassin.woff2') format('woff2');
+	font-family: 'assassin-st';
+	font-weight: 700;
+	font-style: italic;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'assassin-st', sans-serif;
+}
