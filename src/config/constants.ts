@@ -28,3 +28,13 @@ export const SCREEN_COMPONENTS: IScreenComponents = {
 	[SCREENS.SKILLS]: Skills,
 	[SCREENS.ABOUT]: About,
 };
+
+export const FRAME_FOR_LOGO_STYLE: React.CSSProperties = {
+	position: 'relative',
+	top: 'auto',
+	left: '820px',
+	width: '150px',
+	height: '100px',
+	background:
+		"url('../assets/images/logo/FrameForLogo.png') no-repeat center / contain",
+};
