@@ -1,0 +1,413 @@
+.navbar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	height: 0.3rem;
+
+	.menu {
+		max-width: 72rem;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: white;
+
+		.box__logo {
+			position: relative;
+			width: 180px;
+			height: 80px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.box__logo h3 {
+			color: #fff;
+			font-size: 2em;
+			font-weight: 600;
+			letter-spacing: 0.1em;
+			text-shadow: 0 0 10px #ff00d4, 0 0 20px #ff00d4, 0 0 40px #ff00d4,
+				0 0 80px #ff00d4, 0 0 120px #ff00d4;
+		}
+
+		.lightbar {
+			position: absolute;
+			top: 1.5;
+			left: 0;
+			width: 5px;
+			height: 45px;
+			border-radius: 10px;
+			background: #fff;
+			z-index: 2;
+			box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+				0 0 80px #00b3ff, 0 0 120px #00b3ff;
+			animation: animatelightbar 5s linear infinite;
+		}
+
+		.logo {
+			height: 100%;
+			width: 100%;
+			.logo__image {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100px;
+				width: 300px;
+				opacity: 1;
+				background: url('../../../assets/images/logo/FrameForLogo.png')
+					no-repeat center / contain;
+				animation: image-animation 0.1s linear infinite;
+				.boxGlitch {
+					position: absolute;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 100%;
+					text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+						-0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+						0 -0.5rem 2rem #ff00d4, 0 0.5rem 3rem #ff00d4;
+					animation: shine 2s forwards, flicker 3s infinite;
+					.glitch {
+						top: 1px;
+						font-size: 1.4rem;
+						font-weight: 600;
+						text-transform: uppercase;
+						letter-spacing: 4px;
+						line-height: 7rem;
+
+						color: #fff;
+						font-family: 'assassin-st', sans-serif;
+
+						position: relative;
+						padding: 30px;
+						&:before,
+						&:after {
+							content: 'OGTutor';
+							color: #fff;
+							position: absolute;
+							top: 0;
+							overflow: hidden;
+							padding: 30px;
+						}
+						&:before {
+							left: 3px;
+							text-shadow: -3px 0 blue;
+							animation: glitch-before 2s linear 0s infinite
+								alternate-reverse;
+						}
+						&:after {
+							left: -3px;
+							text-shadow: -3px 0 red;
+							animation: glitch-after 2s linear 0s infinite
+								alternate-reverse;
+						}
+						.flicker {
+							animation: shine 2s forwards, blink 3s 2s infinite;
+						}
+
+						.fast-flicker {
+							animation: shine 2s forwards, blink 10s 1s infinite;
+						}
+					}
+				}
+			}
+		}
+
+		.burger {
+			height: 50px;
+			width: 55px;
+			border-radius: 125px;
+			/* cursor: url(../../../../../../public/cursor/arrow.cur) 4 12, auto; */
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+				0 0 80px #00b3ff, 0 0 120px #00b3ff;
+			animation: animate__burger 5s ease-in-out infinite;
+
+			.bar {
+				width: 30px;
+				height: 2px;
+				border-radius: 12px;
+				background-color: #eee;
+				transition: all 0.5s ease-in-out;
+				will-change: transform;
+				position: relative;
+				right: 11px;
+				top: auto;
+				box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+					0 0 80px #00b3ff, 0 0 120px #00b3ff;
+				animation: animate__burger 5s ease-in-out infinite;
+				&:before {
+					content: '';
+					border-radius: 12px;
+					position: absolute;
+					width: 30px;
+					height: 3px;
+					background: #eee;
+					transition: all 0.5s ease-in-out;
+					will-change: transform;
+					box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff,
+						0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff;
+				}
+				&:after {
+					content: '';
+					border-radius: 12px;
+					position: absolute;
+					width: 30px;
+					height: 3px;
+					background: #eee;
+					transition: all 0.5s ease-in-out;
+					will-change: transform;
+					box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff,
+						0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff;
+				}
+				&:before {
+					transform: translateY(-16px);
+				}
+				&:after {
+					transform: translateY(16px);
+				}
+			}
+
+			.bar.open {
+				transform: translateX(-50px);
+				background: transparent;
+				box-shadow: none;
+			}
+			.bar.open::before {
+				transform: rotate(45deg) translate(35px, -35px);
+			}
+			.bar.open::after {
+				transform: rotate(-45deg) translate(35px, 35px);
+			}
+		}
+	}
+}
+
+@keyframes animate__burger {
+	0% {
+		box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+			0 0 80px #00b3ff, 0 0 120px #00b3ff;
+	}
+	50% {
+		box-shadow: 0 0 20px #00b3ff, 0 0 10px #ff00d4, 0 0 30px #00b3ff,
+			0 0 20px #00b3ff, 0 0 100px #ff00d4;
+	}
+	100% {
+		box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+			0 0 80px #00b3ff, 0 0 120px #00b3ff;
+	}
+}
+
+@keyframes glitch-before {
+	$steps: 30;
+	@for $i from 0 through $steps {
+		#{percentage($i * (1/ $steps))} {
+			clip: rect(random(150) + px, 350px, random(150) + px, 20px);
+		}
+	}
+}
+
+@keyframes glitch-after {
+	$steps: 30;
+	@for $i from 0 through $steps {
+		#{percentage($i * (1/ $steps))} {
+			clip: rect(random(150) + px, 350px, random(150) + px, 20px);
+		}
+	}
+}
+
+@keyframes image-animation {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.8;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes animatelightbar {
+	0%,
+	5% {
+		transform: scaleY(0) translateX(0);
+	}
+	10% {
+		transform: scaleY(1) translateX(0);
+	}
+	90% {
+		transform: scaleY(1) translateX(calc(180px - 10px));
+	}
+	95%,
+	100% {
+		transform: scaleY(0) translateX(calc(180px - 10px));
+	}
+}
+
+@keyframes blink {
+	0%,
+	22%,
+	36%,
+	75% {
+		color: rgb(0, 255, 255);
+		text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+			-0.2rem 0.1rem 1rem #6568ff, 0.2rem 0.1rem 1rem #65d3ff,
+			0 -0.5rem 2rem #d30ab1, 0 0.5rem 3rem #42afbd;
+	}
+	28%,
+	33% {
+		color: #6568ff;
+		text-shadow: none;
+	}
+	82%,
+	97% {
+		color: #8c00ff;
+		text-shadow: none;
+	}
+}
+
+@keyframes shine {
+	0% {
+		color: #aa06f7;
+		text-shadow: none;
+	}
+	100% {
+		color: #0ae6ee;
+		text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+			-0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+			0 -0.5rem 2rem #00eeff, 0 0.5rem 3rem #ff00d4;
+	}
+}
+
+@keyframes flicker {
+	from {
+		opacity: 1;
+	}
+
+	4% {
+		opacity: 0.9;
+	}
+
+	6% {
+		opacity: 0.85;
+	}
+
+	8% {
+		opacity: 0.95;
+	}
+
+	10% {
+		opacity: 0.9;
+	}
+
+	11% {
+		opacity: 0.922;
+	}
+
+	12% {
+		opacity: 0.9;
+	}
+
+	14% {
+		opacity: 0.95;
+	}
+
+	16% {
+		opacity: 0.98;
+	}
+
+	17% {
+		opacity: 0.9;
+	}
+
+	19% {
+		opacity: 0.93;
+	}
+
+	20% {
+		opacity: 0.99;
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	26% {
+		opacity: 0.94;
+	}
+
+	28% {
+		opacity: 0.98;
+	}
+
+	37% {
+		opacity: 0.93;
+	}
+
+	38% {
+		opacity: 0.5;
+	}
+
+	39% {
+		opacity: 0.96;
+	}
+
+	42% {
+		opacity: 1;
+	}
+
+	44% {
+		opacity: 0.97;
+	}
+
+	46% {
+		opacity: 0.94;
+	}
+
+	56% {
+		opacity: 0.9;
+	}
+
+	58% {
+		opacity: 0.9;
+	}
+
+	60% {
+		opacity: 0.99;
+	}
+
+	68% {
+		opacity: 1;
+	}
+
+	70% {
+		opacity: 0.9;
+	}
+
+	72% {
+		opacity: 0.95;
+	}
+
+	93% {
+		opacity: 0.93;
+	}
+
+	95% {
+		opacity: 0.95;
+	}
+
+	97% {
+		opacity: 0.93;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
