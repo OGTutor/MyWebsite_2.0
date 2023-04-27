@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { IButton } from './Button.interface';
+import './Button.scss';
 
 const Button: FC<IButton> = ({
 	content,
@@ -10,7 +11,7 @@ const Button: FC<IButton> = ({
 	...rest
 }) => {
 	return (
-		<div className="btn" {...rest}>
+		<div className="btn">
 			<a
 				onMouseEnter={handleMouseEnter}
 				onClick={handleOnClick}

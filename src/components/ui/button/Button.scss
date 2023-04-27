@@ -1,0 +1,95 @@
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	margin: 5px 0;
+	cursor: pointer;
+	.button {
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		display: inline-block;
+		padding: 15px 30px;
+		color: #2196f3;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 24px;
+		letter-spacing: 4px;
+		overflow: hidden;
+		transition: 0.2s;
+		will-change: transform;
+		/* cursor: url(../../../../../public/cursor/arrow.cur) 4 12, auto; */
+	}
+
+	.button__line {
+		position: absolute;
+		display: block;
+	}
+
+	.button__line--top {
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 2px;
+		background: linear-gradient(90deg, transparent, #2196f3);
+	}
+	.button:hover .button__line--top {
+		left: 100%;
+		transition: 1s;
+		transition-delay: 0.25s;
+		will-change: transform;
+	}
+
+	.button__line--bottom {
+		bottom: 0;
+		right: -100%;
+		width: 100%;
+		height: 2px;
+		background: linear-gradient(270deg, transparent, #2196f3);
+	}
+	.button:hover .button__line--bottom {
+		right: 100%;
+		transition: 1s;
+		transition-delay: 0.25s;
+		will-change: transform;
+	}
+
+	.button__line--left {
+		bottom: -100%;
+		left: 0;
+		width: 2px;
+		height: 100%;
+		background: linear-gradient(0deg, transparent, #2196f3);
+	}
+	.button:hover .button__line--left {
+		bottom: 100%;
+		transition: 1s;
+		transition-delay: 0s;
+		will-change: transform;
+	}
+
+	.button__line--right {
+		top: -100%;
+		right: 0;
+		width: 2px;
+		height: 100%;
+		background: linear-gradient(180deg, transparent, #2196f3);
+	}
+	.button:hover .button__line--right {
+		top: 100%;
+		transition: 1s;
+		transition-delay: 0s;
+		will-change: transform;
+	}
+
+	.button:hover {
+		box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+		border-radius: 25px;
+		background-color: #2196f3;
+		color: #333;
+		transition: 0.5s;
+		transition-delay: 1s;
+		will-change: transform;
+	}
+}
