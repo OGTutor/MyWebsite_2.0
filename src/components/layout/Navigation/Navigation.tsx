@@ -1,7 +1,9 @@
 import cn from 'classnames';
 import { FC } from 'react';
+import { setVariable } from '../../../utils/styles-helpers/scssVar';
 import Button from '../../ui/button/Button';
 import { INavigation } from './Navigation.interface';
+import './Navigation.scss';
 
 const Navigation: FC<INavigation> = ({
 	screens,
@@ -27,13 +29,7 @@ const Navigation: FC<INavigation> = ({
 							handleMouseEnter={() => onScreenChange(screen)}
 							handleOnClick={handleOnClick}
 							className="link"
-							style={
-								idx === 0
-									? { '--i': '0.1s' }
-									: { '--i': '0.15s' }
-									? { '--i': '0.2s' }
-									: { '--i': '0.25s' }
-							}
+							style={setVariable(idx)}
 						/>
 					</li>
 				))}

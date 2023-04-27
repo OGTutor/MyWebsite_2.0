@@ -1,0 +1,43 @@
+.links {
+	position: absolute;
+	width: 30%;
+	right: 0;
+	top: 0;
+	min-height: 100vh;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	a {
+		text-decoration: none;
+		color: #eee;
+		padding: 0.07rem 1.2rem;
+		font-size: 1.7rem;
+		display: inline-block;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		transition: 0.3s;
+		will-change: transform;
+		opacity: 0;
+		transform: translateY(10px);
+		animation: hide 0.5s forwards ease;
+		/* cursor: url(../../public/cursor/arrow.cur) 4 12, auto; */
+	}
+
+	ul {
+		list-style: none;
+	}
+}
+
+@keyframes hide {
+	from {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+}
