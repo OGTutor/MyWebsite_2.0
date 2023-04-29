@@ -1,8 +1,4 @@
-import { Canvas } from '@react-three/fiber';
 import { FC, useState } from 'react';
-import { Euler, Vector3 } from 'three';
-import { FRAME_FOR_LOGO_STYLE } from '../../../config/constants';
-import Model from './Model/Model';
 import { INavbar } from './Navbar.interface';
 import './Navbar.scss';
 
@@ -20,7 +16,7 @@ const Navbar: FC<INavbar> = ({ containerRef }) => {
 				<div className="logo">
 					<div className="logo__image">
 						<div className="box__logo">
-							<Canvas
+							{/* <Canvas
 								style={FRAME_FOR_LOGO_STYLE}
 								camera={{ position: [0, 0, 5] }}
 							>
@@ -32,7 +28,7 @@ const Navbar: FC<INavbar> = ({ containerRef }) => {
 									}
 								/>
 								<Model position={new Vector3(1.5, 0, 0)} />
-							</Canvas>
+							</Canvas> */}
 							<div className="lightbar"></div>
 							<div className="topLayer"></div>
 							<div className="boxGlitch">

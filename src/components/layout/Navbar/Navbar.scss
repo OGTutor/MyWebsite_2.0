@@ -25,15 +25,6 @@
 			align-items: center;
 		}
 
-		.box__logo h3 {
-			color: #fff;
-			font-size: 2em;
-			font-weight: 600;
-			letter-spacing: 0.1em;
-			text-shadow: 0 0 10px #ff00d4, 0 0 20px #ff00d4, 0 0 40px #ff00d4,
-				0 0 80px #ff00d4, 0 0 120px #ff00d4;
-		}
-
 		.lightbar {
 			position: absolute;
 			top: 1.5;
@@ -80,7 +71,6 @@
 						line-height: 7rem;
 
 						color: #fff;
-						font-family: 'assassin-st', sans-serif;
 
 						position: relative;
 						padding: 30px;
@@ -131,11 +121,10 @@
 
 			.bar {
 				width: 30px;
-				height: 2px;
+				height: 3px;
 				border-radius: 12px;
 				background-color: #eee;
 				transition: all 0.5s ease-in-out;
-				will-change: transform;
 				position: relative;
 				right: 11px;
 				top: auto;
@@ -150,7 +139,6 @@
 					height: 3px;
 					background: #eee;
 					transition: all 0.5s ease-in-out;
-					will-change: transform;
 					box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff,
 						0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff;
 				}
@@ -162,7 +150,6 @@
 					height: 3px;
 					background: #eee;
 					transition: all 0.5s ease-in-out;
-					will-change: transform;
 					box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff,
 						0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff;
 				}
