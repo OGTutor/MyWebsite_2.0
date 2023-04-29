@@ -33,8 +33,8 @@ export const FRAME_FOR_LOGO_STYLE: React.CSSProperties = {
 	position: 'relative',
 	top: 'auto',
 	left: '820px',
-	width: '150px',
-	height: '100px',
+	width: 'calc(100px + 5px)',
+	height: 'calc(50px + 5px)',
 	background:
 		"url('../assets/images/logo/FrameForLogo.png') no-repeat center / contain",
 };
