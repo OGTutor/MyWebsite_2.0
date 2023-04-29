@@ -19,7 +19,6 @@
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		transition: 0.3s;
-		will-change: transform;
 		opacity: 0;
 		transform: translateY(10px);
 		animation: hide 0.5s forwards ease;
