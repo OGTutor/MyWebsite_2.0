@@ -1,5 +1,5 @@
 import { FC, useRef, useState } from 'react';
-import VideoBackground from '../../assets/media/LayoutBackground/MainTheme.mp4';
+import VideoBackground from '../../assets/media/LayoutBackground/Untitled.mp4';
 import { SCREENS, SCREEN_COMPONENTS } from '../../config/constants';
 import Content from './Content/Content';
 import './Layout.scss';
