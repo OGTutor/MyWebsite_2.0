@@ -1,4 +1,4 @@
-import { FC, useMemo } from 'react'
+import { FC, useMemo } from 'react';
 
 const Content: FC<{ component: React.ComponentType<any> }> = ({
 	component: Component,
