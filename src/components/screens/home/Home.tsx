@@ -75,118 +75,99 @@ const Home: FC = () => {
 		<div className="screen" id="Home">
 			<div className="main">
 				<header className="header__one">
-					<div className="wrapper__gsap__smoother">
-						<div className="content__gsap__smoother">
-							<div className="wrapper__home">
-								<header className="header__section__home">
-									<img
-										data-speed="0.6"
-										src={PhotoImage}
-										alt="Alt"
-										className="photo__image"
-									/>
-									<div className="container__home">
-										<div className="main__header__home">
-											<h1 className="main__title__home">
-												creative scroll
-											</h1>
-										</div>
-									</div>
-								</header>
-								<div className="portfolio__home">
-									<div className="container__home">
-										<main className="gallery__home">
-											<div className="gallery__home__left">
-												<img
-													className="gallery__item"
-													src={FirstWorkImage}
-													alt="Alt"
-												/>
-												<img
-													className="gallery__item"
-													src={SecondWorkImage}
-													alt="Alt"
-												/>
-												<div className="text-block gallery__item">
-													<h2 className="text-block__h">
-														Lorem ipsum dolor sit
-														amet consectetur
-													</h2>
-													<p className="text-block__p">
-														Lorem ipsum dolor sit
-														amet consectetur
-														adipisicing elit.
-														Inventore fugiat ullam,
-														perferendis maiores
-														eaque consequuntur dolor
-														accusantium quo
-														dignissimos quibusdam
-														quaerat, sequi vero
-														veniam. Eum aliquid
-														temporibus corrupti
-														error necessitatibus.
-													</p>
-												</div>
-												<img
-													className="gallery__item"
-													src={SixthWorkImage}
-													alt="Alt"
-												/>
-											</div>
-											<div className="gallery__home__right">
-												<div className="text-block gallery__item">
-													<h2 className="text-block__h">
-														Lorem ipsum dolor sit
-														amet consectetur
-													</h2>
-													<p className="text-block__p">
-														Lorem ipsum dolor sit
-														amet consectetur
-														adipisicing elit.
-														Inventore fugiat ullam,
-														perferendis maiores
-														eaque consequuntur dolor
-														accusantium quo
-														dignissimos quibusdam
-														quaerat, sequi vero
-														veniam. Eum aliquid
-														temporibus corrupti
-														error necessitatibus.
-													</p>
-												</div>
-												<img
-													className="gallery__item"
-													src={ThirdWorkImage}
-													alt="Alt"
-												/>
-												<img
-													className="gallery__item"
-													src={FourthWorkImage}
-													alt="Alt"
-												/>
-												<img
-													className="gallery__item"
-													src={FifthWorkImage}
-													alt="Alt"
-												/>
-											</div>
-										</main>
+					<div className="wrapper__home">
+						<section className="gallery">
+							<header className="header__section__home">
+								<img
+									data-speed="0.6"
+									src={PhotoImage}
+									alt="Alt"
+									className="photo__image"
+								/>
+								<div className="container__home">
+									<div className="main__header__home">
+										<h1 className="main__title__home">
+											creative scroll
+										</h1>
 									</div>
 								</div>
+							</header>
+						</section>
+						<div className="portfolio__home">
+							<div className="container__home">
+								<main className="gallery__home">
+									<div className="gallery__home__left">
+										<img
+											className="gallery__item"
+											src={FirstWorkImage}
+											alt="Alt"
+										/>
+										<img
+											className="gallery__item"
+											src={SecondWorkImage}
+											alt="Alt"
+										/>
+										<div className="text-block gallery__item">
+											<h2 className="text-block__h">
+												Lorem ipsum dolor sit amet
+												consectetur
+											</h2>
+											<p className="text-block__p">
+												Lorem ipsum dolor sit amet
+												consectetur adipisicing elit.
+												Inventore fugiat ullam,
+												perferendis maiores eaque
+												consequuntur dolor accusantium
+												quo dignissimos quibusdam
+												quaerat, sequi vero veniam. Eum
+												aliquid temporibus corrupti
+												error necessitatibus.
+											</p>
+										</div>
+										<img
+											className="gallery__item"
+											src={SixthWorkImage}
+											alt="Alt"
+										/>
+									</div>
+									<div className="gallery__home__right">
+										<div className="text-block gallery__item">
+											<h2 className="text-block__h">
+												Lorem ipsum dolor sit amet
+												consectetur
+											</h2>
+											<p className="text-block__p">
+												Lorem ipsum dolor sit amet
+												consectetur adipisicing elit.
+												Inventore fugiat ullam,
+												perferendis maiores eaque
+												consequuntur dolor accusantium
+												quo dignissimos quibusdam
+												quaerat, sequi vero veniam. Eum
+												aliquid temporibus corrupti
+												error necessitatibus.
+											</p>
+										</div>
+										<img
+											className="gallery__item"
+											src={ThirdWorkImage}
+											alt="Alt"
+										/>
+										<img
+											className="gallery__item"
+											src={FourthWorkImage}
+											alt="Alt"
+										/>
+										<img
+											className="gallery__item"
+											src={FifthWorkImage}
+											alt="Alt"
+										/>
+									</div>
+								</main>
 							</div>
 						</div>
 					</div>
-
-					{/* <div className="header">
-						<div className="header__item">
-							<h2 className="title">Home page</h2>
-							<p>
-								Lorem ipsum dolor sit amet consectetur,
-								adipisicing elit. Maiores unde nulla odio saepe,
-								eius provident.
-							</p>
-						</div>
-					</div> */}
 				</header>
 			</div>
 

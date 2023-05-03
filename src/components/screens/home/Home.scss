@@ -6,10 +6,13 @@
 }
 
 .wrapper__home {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	perspective: 1500px;
 	background-image: url(../../../assets/images/home-page/bg.jpg);
 	/* background-size: 50px; */
 	color: #fafafa;
-	overflow-x: hidden;
 
 	.header__section__home {
 		.photo__image {
