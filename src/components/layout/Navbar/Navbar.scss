@@ -1,3 +1,14 @@
+.lightbar,
+.logo__image,
+.boxGlitch,
+.glitch,
+.flicker,
+.fast-flicker,
+.burger,
+.bar > * {
+	will-change: transform;
+}
+
 .navbar {
 	position: fixed;
 	left: 0;
