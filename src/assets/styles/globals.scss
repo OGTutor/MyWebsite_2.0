@@ -14,6 +14,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: 'assassin-st', sans-serif;
+	/* height: var(--depth); */
 }
 
 body::-webkit-scrollbar {
@@ -26,6 +27,19 @@ body::-webkit-scrollbar {
 	--color-header-home: #f4efec;
 	--color-text-home: #cdc6c3;
 	--gallery-gap-home: calc(var(--index) * 10);
+	--gutter: 30px;
+	--side-small: 26;
+	--side-big: 36;
+	--depth: 25000px;
+	--transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+}
+
+.main,
+.main__background,
+.shadow.one,
+.shadow.two,
+.links a > * {
+	will-change: transform;
 }
 
 //Page
@@ -38,15 +52,13 @@ body::-webkit-scrollbar {
 	//Main
 	.main {
 		position: relative;
-		width: calc(100% + 5px);
-		height: calc(100% + 5px);
+		width: 100%;
 		left: 0;
 		z-index: 5;
 		overflow: hidden;
 		transform-origin: left;
 		transform-style: preserve-3d;
-		transition: 0.5s ease;
-		opacity: 1;
+		transition: 0.5s;
 		header {
 			min-height: 100vh;
 			width: 100%;
@@ -88,10 +100,7 @@ body::-webkit-scrollbar {
 .container.active {
 	.main {
 		content: '';
-		/* background-image: url('./1.jpg') no-repeat top center/cover; */
 		position: absolute;
-		width: calc(100% + 5px);
-		height: calc(100% + 5px);
 		animation: main-animation 1s ease;
 		/* cursor: url(../../public/cursor/arrow.cur) 4 12, auto; */
 		transform: perspective(1300px) rotateY(20deg) translateZ(405px)
