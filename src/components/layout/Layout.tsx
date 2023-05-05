@@ -1,4 +1,5 @@
 import { FC, useRef, useState } from 'react';
+import VideoBackground from '../../assets/media/LayoutBackground/MainTheme.mp4';
 import { SCREENS, SCREEN_COMPONENTS } from '../../config/constants';
 import Content from './Content/Content';
 import './Layout.scss';
@@ -24,13 +25,13 @@ const Layout: FC = () => {
 				containerRef={containerRef}
 			/>
 			<Content component={SCREEN_COMPONENTS[activeScreen]} />
-			{/* <video
-				src={`${VideoBackground}`}
+			<video
+				src={VideoBackground}
 				className="showcase__video"
 				autoPlay
 				loop
 				muted
-			/> */}
+			/>
 		</div>
 	);
 };
