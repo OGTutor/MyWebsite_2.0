@@ -107,9 +107,9 @@ const Projects: FC = () => {
 	};
 
 	return (
-		<div className="screen" id="Portfolio">
+		<div className="screen" id="Projects">
 			<div className="main">
-				<header className="header_three">
+				<header className="header_two">
 					<div className="container">
 						<div id="progressBar" className="progressBar"></div>
 						<section className="gallery">
