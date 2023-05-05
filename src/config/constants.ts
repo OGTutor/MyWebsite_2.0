@@ -7,9 +7,22 @@ import Projects from '../components/screens/projects/Projects';
 import Skills from '../components/screens/skills/Skills';
 import {
 	IDataForProjectPage,
+	IDataForSkillsPage,
 	IScreenComponents,
 	IScreens,
 } from './constants.interface';
+
+import bootstrapImage from '../assets/images/skills-page/images/bootstrap.png';
+import cssImage from '../assets/images/skills-page/images/css.png';
+import expressImage from '../assets/images/skills-page/images/expressjs.png';
+import htmlImage from '../assets/images/skills-page/images/html.png';
+import jsImage from '../assets/images/skills-page/images/js.png';
+import nodeImage from '../assets/images/skills-page/images/node.png';
+import reactImage from '../assets/images/skills-page/images/react.png';
+import reduxImage from '../assets/images/skills-page/images/redux.png';
+import sassImage from '../assets/images/skills-page/images/sass.png';
+import tailwindImage from '../assets/images/skills-page/images/tailwind.png';
+import typescriptImage from '../assets/images/skills-page/images/typescript.png';
 
 export const SCREENS: IScreens = {
 	HOME: 'Home',
@@ -95,4 +108,18 @@ export const DATA_FOR_PROJECT_PAGE: IDataForProjectPage = {
 		bg: true,
 		contents: 'image',
 	},
+};
+
+export const DATA_FOR_SKILLS_PAGE: IDataForSkillsPage = {
+	js: { image: jsImage, title: 'JavaScript' },
+	css: { image: cssImage, title: 'CSS' },
+	html: { image: htmlImage, title: 'HTML' },
+	node: { image: nodeImage, title: 'NodeJS' },
+	express: { image: expressImage, title: 'ExpressJS' },
+	sass: { image: sassImage, title: 'Sass' },
+	bootstrap: { image: bootstrapImage, title: 'Bootstrap' },
+	tailwind: { image: tailwindImage, title: 'Tailwind' },
+	react: { image: reactImage, title: 'React' },
+	redux: { image: reduxImage, title: 'Redux' },
+	typescript: { image: typescriptImage, title: 'TypeScript' },
 };
