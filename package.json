@@ -53,6 +53,7 @@
 		]
 	},
 	"devDependencies": {
+		"@svgr/webpack": "^7.0.0",
 		"@types/gsap": "^3.0.0",
 		"@types/react-scroll": "^1.8.6",
 		"@types/react-slick": "^0.23.10",
