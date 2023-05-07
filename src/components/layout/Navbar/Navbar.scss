@@ -51,8 +51,29 @@
 		}
 
 		.logo {
-			height: 100%;
-			width: 100%;
+			display: flex;
+			align-items: center;
+			flex: 2;
+			transform: matrix3d(
+				0.6,
+				0.2,
+				0,
+				0,
+				-0.2,
+				0.6,
+				0.2,
+				0,
+				0,
+				-0.2,
+				0.6,
+				0,
+				0,
+				0,
+				0,
+				1
+			);
+			opacity: 0;
+			animation: slideNav 1s ease-in-out forwards;
 			.logo__image {
 				display: flex;
 				justify-content: center;
@@ -80,9 +101,7 @@
 						text-transform: uppercase;
 						letter-spacing: 4px;
 						line-height: 7rem;
-
 						color: #fff;
-
 						position: relative;
 						padding: 30px;
 						&:before,
@@ -119,6 +138,7 @@
 		}
 
 		.burger {
+			flex: 1;
 			height: 50px;
 			width: 55px;
 			border-radius: 125px;
@@ -128,7 +148,78 @@
 			justify-content: flex-end;
 			box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
 				0 0 80px #00b3ff, 0 0 120px #00b3ff;
+			opacity: 0;
+			transform: matrix3d(
+				0.6,
+				0.2,
+				0,
+				0,
+				-0.2,
+				0.6,
+				0.2,
+				0,
+				0,
+				-0.2,
+				0.6,
+				0,
+				0,
+				0,
+				0,
+				1
+			);
 			animation: animate__burger 5s ease-in-out infinite;
+			animation: slideNav 1s ease-in-out forwards;
+			margin-right: auto;
+
+			.social-media a {
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				width: 40px;
+				height: 40px;
+				background: transparent;
+				border: 2px solid #0ef;
+				border-radius: 50%;
+				font-size: 20px;
+				color: #0ef;
+				text-decoration: none;
+				margin: 5.9px 10px 0 0;
+				box-shadow: 0 0 15px #ff00d4, 0 0 5px #00b3ff, 0 0 20px #00b3ff,
+					0 0 10px #00b3ff, 0 0 5px #00b3ff;
+				transition: 0.5s ease;
+			}
+
+			.social-media a:hover {
+				box-shadow: 0 0 15px #ff00d4, 0 0 5px #00b3ff, 0 0 20px #00b3ff,
+					0 0 10px #00b3ff, 0 0 5px #00b3ff;
+				animation: animate__burger 1s ease-in-out infinite;
+				svg {
+					fill: rgba(155, 0, 202, 1);
+				}
+			}
+
+			.social-media a:last-child {
+				background: #ffd600;
+				animation: radiation 1s ease-in-out infinite;
+				margin-right: 70px;
+			}
+
+			.social-media a:first-child {
+				background: #000;
+				animation: radiation 1s ease-in-out infinite;
+			}
+
+			.social-media a:last-child:hover {
+				svg {
+					fill: rgba(0, 0, 0, 1);
+				}
+			}
+
+			.social-media a:first-child:hover {
+				svg {
+					fill: rgba(97, 218, 251, 1);
+				}
+			}
 
 			.bar {
 				width: 30px;
@@ -137,7 +228,7 @@
 				background-color: #eee;
 				transition: all 0.5s ease-in-out;
 				position: relative;
-				right: 11px;
+				right: 20px;
 				top: auto;
 				box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
 					0 0 80px #00b3ff, 0 0 120px #00b3ff;
@@ -184,6 +275,52 @@
 				transform: rotate(-45deg) translate(35px, 35px);
 			}
 		}
+	}
+}
+
+@keyframes slideNav {
+	0% {
+		opacity: 0;
+		transform: matrix3d(
+			0.6,
+			0.2,
+			0,
+			0,
+			-0.2,
+			0.6,
+			0.2,
+			0,
+			0,
+			-0.2,
+			0.6,
+			0,
+			0,
+			0,
+			0,
+			1
+		);
+	}
+	100% {
+		opacity: 1;
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+	}
+}
+
+@keyframes radiation {
+	0% {
+		box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+			0 0 80px #00b3ff, 0 0 120px #00b3ff;
+		transform: rotate(0deg);
+	}
+	50% {
+		box-shadow: 0 0 20px #00b3ff, 0 0 10px #ff00d4, 0 0 30px #00b3ff,
+			0 0 20px #00b3ff, 0 0 100px #ff00d4;
+		transform: rotate(360deg);
+	}
+	100% {
+		box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+			0 0 80px #00b3ff, 0 0 120px #00b3ff;
+		transform: rotate(0deg);
 	}
 }
 

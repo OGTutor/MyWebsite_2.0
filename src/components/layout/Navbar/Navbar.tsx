@@ -1,6 +1,11 @@
 import { FC, useState } from 'react';
 import { INavbar } from './Navbar.interface';
 import './Navbar.scss';
+import GitHubIcon from './Subcomponents/GitHubIcon';
+import InstagramIcon from './Subcomponents/InstagramIcon';
+import LinkedInIcon from './Subcomponents/LinkedInIcon';
+import RadiationIcon from './Subcomponents/RadiationIcon';
+import ReactIcon from './Subcomponents/ReactIcon';
 
 const Navbar: FC<INavbar> = ({ containerRef }) => {
 	const [openBar, setOpenBar] = useState(false);
@@ -16,19 +21,6 @@ const Navbar: FC<INavbar> = ({ containerRef }) => {
 				<div className="logo">
 					<div className="logo__image">
 						<div className="box__logo">
-							{/* <Canvas
-								style={FRAME_FOR_LOGO_STYLE}
-								camera={{ position: [0, 0, 5] }}
-							>
-								<Model position={new Vector3(-1.5, 0, 0)} />
-								<Model
-									position={new Vector3(0, 0, 0)}
-									rotation={
-										new Euler(Math.PI / 4, Math.PI / 4, 0)
-									}
-								/>
-								<Model position={new Vector3(1.5, 0, 0)} />
-							</Canvas> */}
 							<div className="lightbar"></div>
 							<div className="topLayer"></div>
 							<div className="boxGlitch">
@@ -46,6 +38,13 @@ const Navbar: FC<INavbar> = ({ containerRef }) => {
 					</div>
 				</div>
 				<div className="burger" onClick={toggleActiveContainer}>
+					<div className="social-media">
+						<ReactIcon />
+						<InstagramIcon />
+						<GitHubIcon />
+						<LinkedInIcon />
+						<RadiationIcon />
+					</div>
 					<div
 						className={`bar ${openBar ? 'open' : ''}`}
 						ref={containerRef}
