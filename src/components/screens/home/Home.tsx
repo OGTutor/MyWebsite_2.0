@@ -1,74 +1,27 @@
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { FC, useEffect } from 'react';
+import { FC, useEffect, useRef } from 'react';
+import Typed from 'typed.js';
 import PhotoImage from '../../../assets/images/home-page/hero.png';
-import FirstWorkImage from '../../../assets/images/home-page/work/1.jpg';
-import SecondWorkImage from '../../../assets/images/home-page/work/2.jpg';
-import ThirdWorkImage from '../../../assets/images/home-page/work/3.jpg';
-import FourthWorkImage from '../../../assets/images/home-page/work/4.jpg';
-import FifthWorkImage from '../../../assets/images/home-page/work/5.jpg';
-import SixthWorkImage from '../../../assets/images/home-page/work/6.jpg';
 import './Home.scss';
 
 const Home: FC = () => {
+	const el = useRef(null);
+
 	useEffect(() => {
-		if (ScrollTrigger.isTouch !== 1) {
-			gsap.registerPlugin(ScrollTrigger);
+		const typed = new Typed(el.current, {
+			strings: [
+				'01000110 01110010 01101111 01101110 01110100',
+				'Frontend',
+				'SyntaxError',
+				'Developer',
+				'undefined',
+				'Frontend Developer',
+			],
+			typeSpeed: 50,
+		});
 
-			gsap.fromTo(
-				'.header__section__home',
-				{ opacity: 1 },
-				{
-					opacity: 0,
-					scrollTrigger: {
-						trigger: '.header__section__home',
-						start: 'center',
-						end: '820',
-						scrub: true,
-					},
-				}
-			);
-
-			const itemsLeft = gsap.utils.toArray(
-				'.gallery__home__left .gallery__item'
-			);
-			itemsLeft.forEach((item) => {
-				gsap.fromTo(
-					item as HTMLElement,
-					{ opacity: 0, x: -100 },
-					{
-						opacity: 1,
-						x: 0,
-						scrollTrigger: {
-							trigger: item as HTMLElement,
-							start: '-850',
-							end: '-100',
-							scrub: true,
-						},
-					}
-				);
-			});
-
-			const itemsRight = gsap.utils.toArray(
-				'.gallery__home__right .gallery__item'
-			);
-			itemsRight.forEach((item) => {
-				gsap.fromTo(
-					item as HTMLElement,
-					{ opacity: 0, x: 100 },
-					{
-						opacity: 1,
-						x: 0,
-						scrollTrigger: {
-							trigger: item as HTMLElement,
-							start: '-750',
-							end: 'top',
-							scrub: true,
-						},
-					}
-				);
-			});
-		}
+		return () => {
+			typed.destroy();
+		};
 	}, []);
 
 	return (
@@ -84,89 +37,75 @@ const Home: FC = () => {
 									alt="Alt"
 									className="photo__image"
 								/>
-								<div className="container__home">
-									<div className="main__header__home">
-										<h1 className="main__title__home">
-											creative scroll
-										</h1>
+								<div className="content__home">
+									<h3>Hello, It`s Me</h3>
+									<div className="logo">
+										<div className="logo__image">
+											<div className="box__logo">
+												<div className="lightbar"></div>
+												<div className="topLayer"></div>
+												<div className="boxGlitch">
+													<h1 className="glitch">
+														<span className="fast-flicker">
+															D
+														</span>
+														<span className="flicker">
+															A
+														</span>
+														<span className="fast-flicker">
+															N
+														</span>
+														<span className="flicker">
+															I
+														</span>
+														<span className="fast-flicker">
+															L
+														</span>
+														{'✠'}
+														<span className="flicker">
+															C
+														</span>
+														<span className="fast-flicker">
+															H
+														</span>
+														<span className="flicker">
+															E
+														</span>
+														<span className="fast-flicker">
+															R
+														</span>
+														<span className="flicker">
+															E
+														</span>
+														<span className="fast-flicker">
+															N
+														</span>
+														<span className="flicker">
+															K
+														</span>
+														<span className="fast-flicker">
+															O
+														</span>
+													</h1>
+												</div>
+											</div>
+										</div>
 									</div>
+									<h3>
+										And I`m a{' '}
+										<span ref={el}>Frontend Developer</span>
+									</h3>
+									<p>
+										Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. Quam veritatis eaque
+										eveniet minus porro alias aspernatur
+										pariatur delectus tenetur at libero
+										quidem omnis, molestias tempore iure
+										voluptatibus enim laudantium veniam.
+									</p>
 								</div>
 							</header>
 						</section>
-						<div className="portfolio__home">
-							<div className="container__home">
-								<main className="gallery__home">
-									<div className="gallery__home__left">
-										<img
-											className="gallery__item"
-											src={FirstWorkImage}
-											alt="Alt"
-										/>
-										<img
-											className="gallery__item"
-											src={SecondWorkImage}
-											alt="Alt"
-										/>
-										<div className="text-block gallery__item">
-											<h2 className="text-block__h">
-												Lorem ipsum dolor sit amet
-												consectetur
-											</h2>
-											<p className="text-block__p">
-												Lorem ipsum dolor sit amet
-												consectetur adipisicing elit.
-												Inventore fugiat ullam,
-												perferendis maiores eaque
-												consequuntur dolor accusantium
-												quo dignissimos quibusdam
-												quaerat, sequi vero veniam. Eum
-												aliquid temporibus corrupti
-												error necessitatibus.
-											</p>
-										</div>
-										<img
-											className="gallery__item"
-											src={SixthWorkImage}
-											alt="Alt"
-										/>
-									</div>
-									<div className="gallery__home__right">
-										<div className="text-block gallery__item">
-											<h2 className="text-block__h">
-												Lorem ipsum dolor sit amet
-												consectetur
-											</h2>
-											<p className="text-block__p">
-												Lorem ipsum dolor sit amet
-												consectetur adipisicing elit.
-												Inventore fugiat ullam,
-												perferendis maiores eaque
-												consequuntur dolor accusantium
-												quo dignissimos quibusdam
-												quaerat, sequi vero veniam. Eum
-												aliquid temporibus corrupti
-												error necessitatibus.
-											</p>
-										</div>
-										<img
-											className="gallery__item"
-											src={ThirdWorkImage}
-											alt="Alt"
-										/>
-										<img
-											className="gallery__item"
-											src={FourthWorkImage}
-											alt="Alt"
-										/>
-										<img
-											className="gallery__item"
-											src={FifthWorkImage}
-											alt="Alt"
-										/>
-									</div>
-								</main>
-							</div>
-						</div>
 					</div>
 				</header>
 			</div>
