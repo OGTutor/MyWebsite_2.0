@@ -1,13 +1,14 @@
 import { FC } from 'react';
+import { IIcon } from './IIcon.interface';
 
-const LinkedInIcon: FC = () => {
+const LinkedInIcon: FC<IIcon> = ({ style, ...rest }) => {
 	return (
-		<a href="#">
+		<a href="#" style={style} {...rest}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
 				height="24"
-				fill="rgba(155, 0, 202, 0.65)"
+				fill="rgba(1, 114, 177, 0.7)"
 				viewBox="0 0 24 24"
 			>
 				<circle cx="4.983" cy="5.009" r="2.188"></circle>

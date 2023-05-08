@@ -1,14 +1,15 @@
 import { FC } from 'react';
+import { IIcon } from './IIcon.interface';
 
-const InstagramIcon: FC = () => {
+const InstagramIcon: FC<IIcon> = ({ style, ...rest }) => {
 	return (
-		<a href="#">
+		<a href="#" style={style} {...rest}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
 				height="24"
 				viewBox="0 0 24 24"
-				fill="rgba(155, 0, 202, 0.65)"
+				fill="rgba(193, 53, 132, 0.7)"
 			>
 				<path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path>
 				<circle cx="16.806" cy="7.207" r="1.078"></circle>

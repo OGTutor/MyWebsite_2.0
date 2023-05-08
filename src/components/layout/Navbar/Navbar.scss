@@ -184,40 +184,65 @@
 				color: #0ef;
 				text-decoration: none;
 				margin: 5.9px 10px 0 0;
+				background: #eee;
 				box-shadow: 0 0 15px #ff00d4, 0 0 5px #00b3ff, 0 0 20px #00b3ff,
 					0 0 10px #00b3ff, 0 0 5px #00b3ff;
 				transition: 0.5s ease;
+				opacity: 0;
+				animation: slideLeft 1s ease forwards,
+					socialMediaEven 6s ease-in-out infinite;
+				animation-delay: calc(0.2s * var(--i)), calc(1s * var(--i));
 			}
 
 			.social-media a:hover {
-				box-shadow: 0 0 15px #ff00d4, 0 0 5px #00b3ff, 0 0 20px #00b3ff,
-					0 0 10px #00b3ff, 0 0 5px #00b3ff;
-				animation: animate__burger 1s ease-in-out infinite;
+				/* animation: animate__burger 1s ease-in-out infinite; */
 				svg {
-					fill: rgba(155, 0, 202, 1);
+					fill: rgba(193, 53, 132, 1);
 				}
-			}
-
-			.social-media a:last-child {
-				background: #ffd600;
-				animation: radiation 1s ease-in-out infinite;
-				margin-right: 70px;
 			}
 
 			.social-media a:first-child {
 				background: #000;
-				animation: radiation 1s ease-in-out infinite;
+				animation: slideLeft 1s ease forwards,
+					socialMediaOdd 3s ease-in-out infinite;
+				animation-delay: calc(0.2s * var(--i)), calc(1.2s * var(--i));
 			}
 
-			.social-media a:last-child:hover {
-				svg {
-					fill: rgba(0, 0, 0, 1);
-				}
+			.social-media a:nth-child(3) {
+				animation: slideLeft 1s ease forwards,
+					socialMediaOdd 3s ease-in-out infinite;
+				animation-delay: calc(0.2s * var(--i)), calc(1s * var(--i));
+			}
+
+			.social-media a:last-child {
+				background: #ffd600;
+				margin-right: 70px;
+				animation: slideLeft 1s ease forwards,
+					socialMediaOdd 3s ease-in-out infinite;
+				animation-delay: calc(0.2s * var(--i)), calc(1s * var(--i));
 			}
 
 			.social-media a:first-child:hover {
 				svg {
 					fill: rgba(97, 218, 251, 1);
+				}
+			}
+
+			.social-media a:nth-child(3):hover {
+				svg {
+					fill: rgba(0, 0, 0, 1);
+				}
+			}
+
+			.social-media a:nth-child(4):hover {
+				svg {
+					fill: rgba(1, 114, 177, 1);
+				}
+			}
+
+			.social-media a:last-child:hover {
+				svg {
+					fill: rgba(0, 0, 0, 1);
 				}
 			}
 
@@ -306,20 +331,38 @@
 	}
 }
 
-@keyframes radiation {
+@keyframes socialMediaOdd {
 	0% {
-		box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
-			0 0 80px #00b3ff, 0 0 120px #00b3ff;
+		box-shadow: 0 0 5px #ff00d4, 0 0 10px #00b3ff, 0 0 20px #00b3ff,
+			0 0 80px #00b3ff, 0 0 10px #00b3ff;
 		transform: rotate(0deg);
 	}
 	50% {
-		box-shadow: 0 0 20px #00b3ff, 0 0 10px #ff00d4, 0 0 30px #00b3ff,
-			0 0 20px #00b3ff, 0 0 100px #ff00d4;
-		transform: rotate(360deg);
+		box-shadow: 0 0 10px #00b3ff, 0 0 5px #ff00d4, 0 0 10px #00b3ff,
+			0 0 20px #00b3ff, 0 0 80px #ff00d4;
+		transform: rotate(-30deg);
 	}
 	100% {
-		box-shadow: 0 0 10px #ff00d4, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
-			0 0 80px #00b3ff, 0 0 120px #00b3ff;
+		box-shadow: 0 0 5px #ff00d4, 0 0 10px #00b3ff, 0 0 20px #00b3ff,
+			0 0 80px #00b3ff, 0 0 10px #00b3ff;
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes socialMediaEven {
+	0% {
+		box-shadow: 0 0 5px #ff00d4, 0 0 10px #00b3ff, 0 0 20px #00b3ff,
+			0 0 80px #00b3ff, 0 0 10px #00b3ff;
+		transform: rotate(0deg);
+	}
+	50% {
+		box-shadow: 0 0 10px #00b3ff, 0 0 5px #ff00d4, 0 0 20px #00b3ff,
+			0 0 20px #00b3ff, 0 0 80px #ff00d4;
+		transform: rotate(30deg);
+	}
+	100% {
+		box-shadow: 0 0 5px #ff00d4, 0 0 10px #00b3ff, 0 0 20px #00b3ff,
+			0 0 80px #00b3ff, 0 0 10px #00b3ff;
 		transform: rotate(0deg);
 	}
 }

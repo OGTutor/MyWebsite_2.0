@@ -39,11 +39,11 @@ const Navbar: FC<INavbar> = ({ containerRef }) => {
 				</div>
 				<div className="burger" onClick={toggleActiveContainer}>
 					<div className="social-media">
-						<ReactIcon />
-						<InstagramIcon />
-						<GitHubIcon />
-						<LinkedInIcon />
-						<RadiationIcon />
+						<ReactIcon style={{ '--i': '1' }} />
+						<InstagramIcon style={{ '--i': '2' }} />
+						<GitHubIcon style={{ '--i': '3' }} />
+						<LinkedInIcon style={{ '--i': '4' }} />
+						<RadiationIcon style={{ '--i': '5' }} />
 					</div>
 					<div
 						className={`bar ${openBar ? 'open' : ''}`}

@@ -1,8 +1,9 @@
 import { FC } from 'react';
+import { IIcon } from './IIcon.interface';
 
-const RadiationIcon: FC = () => {
+const RadiationIcon: FC<IIcon> = ({ style, ...rest }) => {
 	return (
-		<a href="#">
+		<a href="#" style={style} {...rest}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
