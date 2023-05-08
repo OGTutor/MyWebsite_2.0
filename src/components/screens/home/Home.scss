@@ -13,6 +13,10 @@
 			width: calc(var(--index) * 36);
 			left: 39vw;
 			top: 8vh;
+			opacity: 0;
+			animation: zoomIn 1s ease forwards,
+				floatImage 4s ease-in-out infinite;
+			animation-delay: 2s, 4s;
 		}
 		.content__home {
 			position: absolute;
@@ -105,6 +109,29 @@
 				}
 			}
 		}
+	}
+}
+
+/* @keyframes floatImage {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-24px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+} */
+
+@keyframes zoomIn {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
 	}
 }
 

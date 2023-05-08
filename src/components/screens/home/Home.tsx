@@ -2,6 +2,7 @@ import { FC, useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import PhotoImage from '../../../assets/images/home-page/hero.png';
 import './Home.scss';
+import HomeButton from './HomeButton/HomeButton';
 
 const Home: FC = () => {
 	const el = useRef(null);
@@ -104,6 +105,7 @@ const Home: FC = () => {
 										voluptatibus enim laudantium veniam.
 									</p>
 								</div>
+								<HomeButton />
 							</header>
 						</section>
 					</div>
