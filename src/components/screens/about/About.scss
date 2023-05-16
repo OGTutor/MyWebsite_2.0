@@ -1,0 +1,365 @@
+.wrapper__about {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url(../../../assets/images/home-page/bg.jpg);
+	color: #fafafa;
+	overflow: hidden;
+	.vignette {
+		position: absolute;
+		z-index: 100;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: radial-gradient(
+			ellipse at center,
+			rgba(0, 0, 0, 0) 65%,
+			rgba(0, 0, 0, 0.7)
+		);
+		pointer-events: none;
+	}
+	.parallax {
+		pointer-events: none;
+		transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
+	}
+	.bg-img {
+		position: absolute;
+		width: 194.44%;
+		top: 1.86%;
+		left: 50.69%;
+		z-index: 1;
+	}
+	.fog-7 {
+		position: absolute;
+		width: 132%;
+		top: 37.7%;
+		left: 70.8%;
+		z-index: 2;
+	}
+	.mountain-10 {
+		position: absolute;
+		width: 61.94%;
+		top: 50.85%;
+		left: 65.97%;
+		z-index: 3;
+	}
+	.fog-6 {
+		position: absolute;
+		width: 128.47%;
+		top: 60.49%;
+		left: 50.69%;
+		z-index: 4;
+	}
+	.mountain-9 {
+		position: absolute;
+		width: 32.63%;
+		top: 63.95%;
+		left: 18.27%;
+		z-index: 5;
+	}
+	.mountain-8 {
+		position: absolute;
+		width: 56.25%;
+		top: 62.34%;
+		left: 35.98%;
+		z-index: 6;
+	}
+	.fog-5 {
+		position: absolute;
+		width: 31.25%;
+		top: 69.75%;
+		left: 50.13%;
+		z-index: 7;
+	}
+	.mountain-7 {
+		position: absolute;
+		width: 37.36%;
+		top: 65.18%;
+		left: 71.18%;
+		z-index: 8;
+	}
+	.text {
+		position: absolute;
+		top: 33.96%;
+		left: 50%;
+		text-align: center;
+		text-transform: uppercase;
+		z-index: 9;
+		pointer-events: auto;
+	}
+	.text h2 {
+		font-size: 6.5rem;
+		line-height: 0.88;
+	}
+	.text h1 {
+		font-size: 8rem;
+		line-height: 0.88;
+	}
+	.mountain-6 {
+		position: absolute;
+		width: 28.33%;
+		top: 50.74%;
+		left: 90.97%;
+		z-index: 10;
+	}
+	.fog-4 {
+		position: absolute;
+		width: 40.97%;
+		top: 79.01%;
+		left: 49.59%;
+		z-index: 11;
+	}
+	.mountain-5 {
+		position: absolute;
+		width: 43.4%;
+		top: 82.09%;
+		left: 50.9%;
+		z-index: 12;
+	}
+	.fog-3 {
+		position: absolute;
+		width: 111.11%;
+		top: 63.58%;
+		left: 49.9%;
+		z-index: 13;
+	}
+	.mountain-4 {
+		position: absolute;
+		width: 54.16%;
+		top: 75.92%;
+		left: 23.51%;
+		z-index: 14;
+	}
+	/* right m */
+	.mountain-3 {
+		position: absolute;
+		width: 32.22%;
+		top: 61.35%;
+		left: 101.11%;
+		z-index: 15;
+	}
+	.fog-2 {
+		position: absolute;
+		width: 108.33%;
+		top: 68.14%;
+		left: 48%;
+		z-index: 16;
+	}
+	.mountain-2 {
+		position: absolute;
+		width: 47.91%;
+		top: 69.01%;
+		left: 78.61%;
+		z-index: 17;
+	}
+	.mountain-1 {
+		position: absolute;
+		width: 37.15%;
+		top: 52%;
+		left: 8.27%;
+		z-index: 18;
+	}
+	.sun-rays {
+		position: absolute;
+		width: 55.55%;
+		top: 0;
+		right: 0;
+		z-index: 19;
+		pointer-events: none;
+	}
+	.black-shadow {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		right: 0;
+		z-index: 20;
+		pointer-events: none;
+	}
+	.fog-1 {
+		position: absolute;
+		width: 111.8%;
+		top: 59.26%;
+		left: 50.69%;
+		z-index: 21;
+	}
+}
+
+@media (max-width: 1100px) {
+	.text {
+	}
+	.text h1 {
+	}
+	.text h2 {
+	}
+	.bg-img {
+		width: initial;
+		height: 116.66%;
+	}
+	.fog-7 {
+		width: initial;
+		height: 79.2%;
+	}
+	.mountain-10 {
+		width: initial;
+		height: 37.16%;
+	}
+	.fog-6 {
+		width: initial;
+		height: 77.08%;
+	}
+	.mountain-9 {
+		width: initial;
+		height: 19.57%;
+	}
+	.mountain-8 {
+		width: initial;
+		height: 33.75%;
+	}
+	.fog-5 {
+		width: initial;
+		height: 18.75%;
+	}
+	.mountain-7 {
+		width: initial;
+		height: 22.41%;
+	}
+	.mountain-6 {
+		width: initial;
+		height: 16.99%;
+	}
+	.fog-4 {
+		width: initial;
+		height: 24.58%;
+	}
+	.mountain-5 {
+		width: initial;
+		height: 26.04%;
+	}
+	.fog-3 {
+		width: initial;
+		height: 66.66%;
+	}
+	.mountain-4 {
+		width: initial;
+		height: 32.49%;
+	}
+	.mountain-3 {
+		width: initial;
+		height: 19.33%;
+	}
+	.fog-2 {
+		width: initial;
+		height: 64.99%;
+	}
+	.mountain-2 {
+		width: initial;
+		height: 28.74%;
+	}
+	.mountain-1 {
+		width: initial;
+		height: 22.29%;
+	}
+	.sun-rays {
+		width: initial;
+		height: 33.33%;
+	}
+	.fog-1 {
+		width: initial;
+		height: 67.08%;
+	}
+}
+
+@media (max-width: 725px) {
+	.text {
+	}
+	.text h1 {
+	}
+	.text h2 {
+	}
+	.bg-img {
+		width: initial;
+		height: 311.104%;
+	}
+	.fog-7 {
+		width: initial;
+		height: 211.2%;
+	}
+	.mountain-10 {
+		width: initial;
+		height: 99.1%;
+	}
+	.fog-6 {
+		width: initial;
+		height: 205.55%;
+	}
+	.mountain-9 {
+		width: initial;
+		height: 52.2%;
+	}
+	.mountain-8 {
+		width: initial;
+		height: 90%;
+	}
+	.fog-5 {
+		width: initial;
+		height: 50%;
+	}
+	.mountain-7 {
+		width: initial;
+		height: 59.77%;
+	}
+	.mountain-6 {
+		width: initial;
+		height: 45.32%;
+	}
+	.fog-4 {
+		width: initial;
+		height: 65.55%;
+	}
+	.mountain-5 {
+		width: initial;
+		height: 69.44%;
+	}
+	.fog-3 {
+		width: initial;
+		height: 177.77%;
+	}
+	.mountain-4 {
+		width: initial;
+		height: 86.65%;
+	}
+	.mountain-3 {
+		width: initial;
+		height: 51.55%;
+	}
+	.fog-2 {
+		width: initial;
+		height: 173.32%;
+	}
+	.mountain-2 {
+		width: initial;
+		height: 76.65%;
+	}
+	.mountain-1 {
+		width: initial;
+		height: 59.44%;
+	}
+	.sun-rays {
+		width: initial;
+		height: 88.88%;
+	}
+	.fog-1 {
+		width: initial;
+		height: 178.88%;
+	}
+}
+
+@media (max-width: 520px) {
+	.text {
+	}
+	.text h1 {
+	}
+	.text h2 {
+	}
+}
